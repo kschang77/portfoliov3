@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "skill": "'Fullstack Developer',",
+    "notes": "<p>I graduated from fullstack (full-time) coding bootcamp at University of California Berkeley Extension.</p><p>I have coded static websites with just notepad.exe and Paint.net.</p><p>I have also coded dynamic websites with CSS, JS, and jQuery, Bootstrap 4, UIKit, and more. </p><P>I have coded backend RESTful websites with Node.js and Express.js with Sequelize/MySQL and Mongoose/MongoDB as backends.</P><p>... and everything else in between.</p>"
+  },
+  {
+    "id": 2,
+    "skill": "'IT Support Generalist',",
+    "notes": "<p>I have a specialization certificate in <a href='https://coursera.org/share/9984b63b2d085b55c6a860a1af3beddd'>IT Support from Google</a></p><p>I have a specialization certificate in <a href='https://www.coursera.org/account/accomplishments/professional-cert/NWFAAQPTAHCJ'>IT Automation with Python from Google</a></p><p>I have a specialization certificate in <a href='https://www.coursera.org/account/accomplishments/specialization/V6TXWG7PCTKA'>IT Fundamentals for Cybersecurity from IBM</a></p><p>I know how to build PCs and networks, and have done so for years.</p>"
+  },
+  {
+    "id": 3,
+    "skill": "'Data/Base Engineer',",
+    "notes": "<p>I have a <a href='https://www.coursera.org/account/accomplishments/professional-cert/V53AL32UTWAZ'>specialization certificate in Data Science</a> from IBM.</p><p>I have a <a href='https://coursera.org/share/df41565fca43861117b33ba5eccd838f'>specialization certificate in Applied AI</a> from IBM</p><p>I have a <a href='https://www.coursera.org/account/accomplishments/specialization/3ML9NP54B24N'>specialization certficate in Modern Big Data Analysis with SQL</a> from Cloudera</p><p>... and a few other things</p>"
+  },
+  {
+    "id": 4,
+    "skill": "'Other Skills',",
+    "notes": "<p>I was the editor of <a href='https://gamefaqs.gamespot.com/community/kschang77/contributions/faqs'>over 60 game FAQs/guides</a> read by millions of gamers. <a href='https://gamefaqs.gamespot.com/community/kschang77'>My GameFAQs user level is 36 'Sage'</a> -- highest non-staff level possible</p><p>I was a contributor (as Kasey K.S. Chang) to the official <a href='https://books.google.com/books?id=cbYf2l7gczUC&pg=PT5&lpg=PT5&dq=star+trek+encyclopedia+Kasey+K+S+Chang&source=bl&ots=lGtOB9m0Ut&sig=ACfU3U3xW_QFCsZHvlbFyxHrlCTIU3FTug&hl=en&sa=X&ved=2ahUKEwieyITCmdHoAhUCNKwKHTZpBhQQ6AEwAHoECAwQKQ#v=onepage&q=star%20trek%20encyclopedia%20Kasey%20K%20S%20Chang&f=false'>Star Trek Encyclopedia</a></p><p>I helped bring down at least two Ponzi schemes with my Google-fu and online blog</p><p>I speak English, Mandarin, Cantonese, and some Spanish</p><p>I help people daily online with translation, writing, and other question on reddit as /u/kschang and on Stack Overflow / Stack Exchange as 'Kasey Chang'</p>"
+  },
+  {
+    "id": 5,
+    "skill": "contact_me()",
+    "notes": "<ul><li><a href='#'><i class='fas fa-phone-square-alt'></i><span class='text'> 1-415-413-8249</span></a></li><li><a href='#'><i class='fas fa-envelope-square'></i><span class='text'> guyreviews77-hired@yahoo.com</span></a></li><li><a href='https://www.linkedin.com/in/kasey-chang'><i class='fab fa-linkedin'></i><span class='text'> www.linkedin.com/in/kasey-chang</span></a></li><li><a href='https://github.com/kschang77'> <i class='fab fa-github-square'></i> github.com/kschang77</span></a></li><li><a href='https://github.com/kschang77/portfoliov2/blob/master/Resume-Kasey-Chang.pdf'> <i class='fas fa-file-pdf'></i> My resume (PDF)</span></a></li></ul>"
+  }
+]

@@ -17,6 +17,7 @@ function MyNavbar() {
           <Nav.Link href="#home-section">Home</Nav.Link>
           <Nav.Link href="#fullstack-section">Fullstack</Nav.Link>
           <Nav.Link href="#it-support-section">IT_Support</Nav.Link>
+          <Nav.Link href="#data-section">Data/base</Nav.Link>
           <Nav.Link href="#other-section">Other</Nav.Link>
           <Nav.Link href="#contact-section">Contact</Nav.Link>
         </Nav>
