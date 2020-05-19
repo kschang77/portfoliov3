@@ -13,7 +13,7 @@ import iconShadow from './marker-shadow-none.png';
 
 const MapLeaflet = (ix) => {
   const mapRef = useRef(null);
-  const [open, setOpen] = React.useState(false);
+  const [curPos, setcurPos] = useState(0)
   const [brainLocations] = useState([
     [-55, 50],
     [-46, 30],
@@ -32,6 +32,8 @@ const MapLeaflet = (ix) => {
 
 
   useEffect(() => {
+
+    console.log("curPos=", curPos)
 
     console.log("ix=", ix)
     const w = 225
@@ -65,9 +67,9 @@ const MapLeaflet = (ix) => {
     }
   }
 
-  function centerMapView2(i) {
+  function centerMapView2() {
     let { leafletElement } = mapRef.current;
-    var curPos = brainLocations[i]
+    var curPos = brainLocations[1]
     console.log(curPos)
     leafletElement.setView(curPos, 4);
   }
@@ -86,7 +88,6 @@ const MapLeaflet = (ix) => {
       boundsOptions={{ padding: [50, 50] }}
     // style={{ height: "80vh" }}
     >
-      {() => centerMapView2(this.state.curpos)}
       {brainLocations.map((position, i) => (
         <Marker
           position={position}

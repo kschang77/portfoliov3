@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Testmap2 from "./Testmap2.js"
+import Testmap3 from "./Testmap3.js"
 import Wrapper from "./Wrapper";
 import Row from "./Row";
 import Col from "./Col";
@@ -12,23 +12,25 @@ import renderHTML from 'react-render-html'
 
 // import { render } from "@testing-library/react";
 
-
-
-
 class App extends Component {
-  state = {
-    skilltexts
+  constructor(props) {
+    super(props);
+    this.map2Element = React.createRef();
   }
+
+  state = {}
+  // state = {
+  //   skilltexts
+  // }
+
 
   handleClick = id => {
     let sk = skilltexts.find(skilltext => skilltext.id === id)
-    // console.log("handleClick called ", sk)
-
+    console.log("handleClick called ", id)
     this.setState({
       alert: this.getSkillNotes(sk.skill, sk.notes),
-      curpos: id
     })
-
+    this.map2Element.current.centerMapView2(id - 1)
   };
 
   getSkillNotes = (skill, notes) => (
@@ -59,7 +61,7 @@ class App extends Component {
         <Row>
           <Col size='6'>
             <div style={{ backgroundColor: "#000" }}>
-              <Testmap2 />
+              <Testmap3 ref={this.map2Element} />
             </div>
           </Col>
           <Col size='6' className="myjumbo text-wrap">
@@ -67,7 +69,7 @@ class App extends Component {
             <h3>self.legal_name = "Kuosheng Chang"</h3><br />
             <h3>self.status = "multi-phasic<br /> computer expert"</h3><br />
             <h3>self.skills = [<br /></h3>
-            {this.state.skilltexts.map(skilltext => (
+            {skilltexts.map(skilltext => (
               <div key={skilltext.id}>
                 {this.state.alert}
                 <h3><a className="link" key={skilltext.id} onClick={() => this.handleClick(skilltext.id)}> {skilltext.skill} < br /></a></h3>
@@ -75,7 +77,7 @@ class App extends Component {
             ))}
             <h3>... ]</h3><br />
 
-            {/* <h3><span onClick={() => this.handleClick(5)}>Something</span></h3> */}
+            <h3><span onClick={() => this.handleClick(5)}>Something</span></h3>
           </Col>
         </Row>
       </Wrapper >
