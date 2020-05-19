@@ -7,10 +7,11 @@ import L from 'leaflet'
 import 'leaflet/dist/leaflet.css';
 import icon from './marker-icon-custom-2x.png';
 import iconShadow from './marker-shadow-none.png';
+// import { render } from '@testing-library/react';
 // import MarkerPopup from "./MarkerPopup.js"
 // import skilltexts from "./skilltexts.json";
 
-const MapLeaflet = () => {
+const MapLeaflet = (ix) => {
   const mapRef = useRef(null);
   const [open, setOpen] = React.useState(false);
   const [brainLocations] = useState([
@@ -32,6 +33,7 @@ const MapLeaflet = () => {
 
   useEffect(() => {
 
+    console.log("ix=", ix)
     const w = 225
     const h = 225
     const url = "./brain.jpg"
@@ -52,17 +54,22 @@ const MapLeaflet = () => {
 
     map.fitBounds(image.getBounds());
 
+
   })
 
   function centerMapView(e) {
-    const { leafletElement } = mapRef.current;
-
+    let { leafletElement } = mapRef.current;
     if (e) {
       console.log(e.latlng)
       leafletElement.setView(e.latlng, 4);
-      // const point = leafletElement.project(e.target._latlng);
-      // leafletElement.setView(leafletElement.unproject(point), { animate: true });
     }
+  }
+
+  function centerMapView2(i) {
+    let { leafletElement } = mapRef.current;
+    var curPos = brainLocations[i]
+    console.log(curPos)
+    leafletElement.setView(curPos, 4);
   }
 
   return (
@@ -79,6 +86,7 @@ const MapLeaflet = () => {
       boundsOptions={{ padding: [50, 50] }}
     // style={{ height: "80vh" }}
     >
+      {() => centerMapView2(this.state.curpos)}
       {brainLocations.map((position, i) => (
         <Marker
           position={position}
@@ -87,12 +95,9 @@ const MapLeaflet = () => {
           icon={customMarker}
           onClick={centerMapView}
         >
-          {/* <MarkerPopup key={i} position={position} skill={skilltexts[i].skill} notes={skilltexts[i].notes}
-          /> */}
         </Marker>
       ))}
     </LeafletMap>
   );
-};
-
+}
 export default MapLeaflet;

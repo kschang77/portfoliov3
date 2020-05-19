@@ -24,7 +24,10 @@ class App extends Component {
     let sk = skilltexts.find(skilltext => skilltext.id === id)
     // console.log("handleClick called ", sk)
 
-    this.setState({ alert: this.getSkillNotes(sk.skill, sk.notes) })
+    this.setState({
+      alert: this.getSkillNotes(sk.skill, sk.notes),
+      curpos: id
+    })
 
   };
 
@@ -72,7 +75,7 @@ class App extends Component {
             ))}
             <h3>... ]</h3><br />
 
-            <h3><span onClick={() => this.handleClick(5)}>Something</span></h3>
+            {/* <h3><span onClick={() => this.handleClick(5)}>Something</span></h3> */}
           </Col>
         </Row>
       </Wrapper >
