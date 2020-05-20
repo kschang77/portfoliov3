@@ -21,11 +21,11 @@ let customMarker = L.icon({
 
 
 let brainLocations = ([
-  [-55, 50],
-  [-46, 30],
-  [-64, 71],
-  [-39, 60],
-  [-50, 80]
+  [-55, 50, 1],
+  [-46, 30, 2],
+  [-64, 71, 3],
+  [-39, 60, 4],
+  [-50, 80, 5]
 ])
 
 
@@ -71,18 +71,19 @@ class MapLeaflet extends Component {
   }
 
   centerMapView(e) {
-    console.log(this)
+    // console.log(this)
     let { leafletElement } = this.mapRef.current;
     if (e) {
-      console.log(e.latlng)
+      // console.log(e.latlng.alt)
       leafletElement.setView(e.latlng, 4);
+      this.props.handleClick2(e.latlng.alt)
     }
   }
 
   centerMapView2(id) {
     let { leafletElement } = this.mapRef.current;
     var curPos = brainLocations[id]
-    console.log(curPos)
+    // console.log(curPos)
     leafletElement.setView(curPos, 4);
   }
 
@@ -95,11 +96,12 @@ class MapLeaflet extends Component {
         // onPopupopen={centerMapView.bind(this)}
         zoom={4}
         crs={CRS.Simple}
+        zoomControl={false}
         bounceAtZoomLimits={true}
         maxBoundsViscosity={0.5}
-        animate="true"
+        animate={true}
         boundsOptions={{ padding: [50, 50] }}
-      // style={{ height: "80vh" }}
+        style={{ height: "80vh" }}
       >
         {brainLocations.map((position, i) => (
           <Marker

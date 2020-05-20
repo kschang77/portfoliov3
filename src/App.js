@@ -26,12 +26,21 @@ class App extends Component {
 
   handleClick = id => {
     let sk = skilltexts.find(skilltext => skilltext.id === id)
-    console.log("handleClick called ", id)
+    // console.log("handleClick called ", id)
     this.setState({
       alert: this.getSkillNotes(sk.skill, sk.notes),
     })
     this.map2Element.current.centerMapView2(id - 1)
   };
+
+  handleClick2 = id => {
+    let sk = skilltexts.find(skilltext => skilltext.id === id)
+    // console.log("handleClick called ", id)
+    this.setState({
+      alert: this.getSkillNotes(sk.skill, sk.notes),
+    })
+  };
+
 
   getSkillNotes = (skill, notes) => (
     < SweetAlert
@@ -47,7 +56,7 @@ class App extends Component {
   )
 
   hideAlert = () => {
-    console.log("hiding alert")
+    // console.log("hiding alert")
     this.setState({
       alert: null
     })
@@ -61,23 +70,23 @@ class App extends Component {
         <Row>
           <Col size='6'>
             <div style={{ backgroundColor: "#000" }}>
-              <Testmap3 ref={this.map2Element} />
+              <Testmap3 ref={this.map2Element} handleClick2={this.handleClick2.bind(this)} />
             </div>
           </Col>
           <Col size='6' className="myjumbo text-wrap">
-            <h3>self.name = "Kasey Chang"</h3><br />
+            <h3 className="link">self.name = "Kasey Chang"</h3><br />
             <h3>self.legal_name = "Kuosheng Chang"</h3><br />
             <h3>self.status = "multi-phasic<br /> computer expert"</h3><br />
             <h3>self.skills = [<br /></h3>
             {skilltexts.map(skilltext => (
               <div key={skilltext.id}>
                 {this.state.alert}
-                <h3><a className="link" key={skilltext.id} onClick={() => this.handleClick(skilltext.id)}> {skilltext.skill} < br /></a></h3>
+                <h3><a className="link" href="#" key={skilltext.id} onClick={() => this.handleClick(skilltext.id)}> {skilltext.skill} < br /></a></h3>
               </div>
             ))}
             <h3>... ]</h3><br />
 
-            <h3><span onClick={() => this.handleClick(5)}>Something</span></h3>
+            {/* <h3><span onClick={() => this.handleClick(5)}>Something</span></h3> */}
           </Col>
         </Row>
       </Wrapper >
