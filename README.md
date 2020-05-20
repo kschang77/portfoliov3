@@ -1,7 +1,7 @@
-# Welcome to KChang_Porfolio_V3 👋
+# Welcome to KChang_Portfolio_V3 👋
 ![Version](https://img.shields.io/badge/version-0.9.0-blue.svg?cacheSeconds=2592000)
 
-> A react.js portfoli demo and sort of a resume fior Kasey Chang. This one is designed from scratch as a React.js demo. 
+> A react.js portfolio demo and sort of an online demo/resume fior Kasey Chang. This one is designed from scratch as a React.js demo. 
 
 
 
@@ -11,17 +11,17 @@
 
 ## Features
 
-Picture panning based on external links (click on any of the five links available with green background. )
+* Picture panning based on external links (click on any of the five links available with green background. )
 
-Clicking on any of the five custom markers on the picture(map) also pans the picture(map) to center on that marker. 
+* Clicking on any of the five custom markers on the picture(map) also pans the picture(map) to center on that marker. 
 
-All five links brings up a modal dialog box showing the same details, either way you open them.
+* All five links brings up a modal dialog box showing the same details, either way you open them.
 
-The details are verbiage contained in a json file and can be easily edited without affecting code. 
+* The details are verbiage contained in a json file and can be easily edited without affecting code. 
 
-The details are HTML fragments and rendered properly in the modal dialog boxes. 
+* The details are HTML fragments and rendered properly in the modal dialog boxes. 
 
-Some CSS effects (to be optimized)
+* Some CSS effects (to be optimized)
 
 
 ### Interesting code bits
