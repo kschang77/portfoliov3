@@ -2,7 +2,7 @@
   {
     "id": 1,
     "skill": "'Fullstack Developer',",
-    "notes": "<p>I graduated from fullstack (full-time) coding bootcamp at University of California Berkeley Extension.</p><p>I have coded static websites with just notepad.exe and Paint.net.</p><p>I have also coded dynamic websites with CSS, JS, and jQuery, Bootstrap 4, UIKit, and more. </p><P>I have coded backend RESTful websites with Node.js and Express.js with Sequelize/MySQL and Mongoose/MongoDB as backends.</P><p>... and everything else in between.</p>"
+    "notes": "<p>I graduated from fullstack (full-time) coding bootcamp at University of California Berkeley Extension.</p><p>I have coded <a href="https://github.com/kschang77/kschang77.github.io">static websites</a> with just <a href="https://kschang77.github.io/portfoliov2/">notepad.exe and Paint.net.</a></p><p>I have also coded dynamic websites with CSS, JS, and jQuery, Bootstrap 4, UIKit, and more. </p><P>I have coded backend <a href="https://github.com/kschang77/klingon-learner">RESTful websites with Node.js and Express.js with Sequelize/MySQL</a> and <a href="https://github.com/kschang77/geo-hunt">Mongoose/MongoDB as backends</a>.</P><p>... <a href="https://kschang77.github.io/doctorsgame/">plus React.js</a> and <a href="https://github.com/kschang77/portfoliov3">everything else</a> in between.</p>"
   },
   {
     "id": 2,
